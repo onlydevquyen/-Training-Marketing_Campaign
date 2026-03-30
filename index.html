@@ -161,12 +161,25 @@
 
 <body>
 
-  <form class="form-wrapper" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DAz000008Ib4c" method="POST">
+ <form
+    class="form-wrapper"
+    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DBK000005rUrV"
+    method="POST"
+  >
 
-    <input type="hidden" name="oid" value="00DAz000008Ib4c">
+    <!-- Hidden fields -->
+    <input type="hidden" name="oid" value="00DBK000005rUrV">
     <input type="hidden" name="retURL" value="https://trungnguyenecoffee.com/">
+
+    <input id="lead_source" name="lead_source" type="hidden" value="Website">
     <input id="company" name="company" type="hidden" value="Non-company">
-    <input id="00NAz000004lal5" name="00NAz000004lal5" type="hidden" value="701Az00000Ue4n3IAB">
+    <input id="00NNn00000BWO0W" name="00NNn00000BWO0W" type="hidden" value="701BK00000gDA1NYAW"> <!--  UTM Campaign  -->
+
+    <input id="00NNn00000BWO0X" name="00NNn00000BWO0X" type="hidden" value="UTM Content"> <!--  UTM Content  -->
+    <input id="00NNn00000BWO0Y" name="00NNn00000BWO0Y" type="hidden" value="UTM Medium"> <!--  UTM Medium  -->
+    <input id="00NNn00000BWO0Z" name="00NNn00000BWO0Z" type="hidden" value="UTM Source"> <!--  UTM Source  -->
+    <input id="00NNn00000BWO0a" name="00NNn00000BWO0a" type="hidden" value="UTM Term"> <!--  UTM Term  -->
+
 
     <div class="form-title">
       <h2>KHÁT VỌNG TOÀN CẦU</h2>
@@ -190,8 +203,8 @@
     </div>
 
     <div class="form-group">
-      <label for="00NAz000004zaQr">Khu vực</label>
-      <select required id="00NAz000004zaQr" name="00NAz000004zaQr">
+      <label for="00NNn00000BWO0P">Khu vực</label>
+        <select required id="00NNn00000BWO0P" name="00NNn00000BWO0P">
         <option value="">-- Chọn khu vực --</option>
         <option value="a08Az00000Ljm3GIAR">Thành phố Hồ Chí Minh</option>
         <option value="a08Az00000Ljm2pIAB">Thành phố Hà Nội</option>
@@ -201,16 +214,16 @@
 
     <div class="form-row">
       <div class="form-group">
-        <label for="00NAz000004lehF">Thương hiệu</label>
-        <select id="00NAz000004lehF" name="00NAz000004lehF">
+        <label for="00NNn00000BWO06">Interested Brand</label>
+        <select id="00NNn00000BWO06" name="00NNn00000BWO06">
           <option value="">-- Chọn --</option>
           <option value="Trung Nguyen Legend">Trung Nguyen Legend</option>
           <option value="Trung Nguyen E-Coffee">Trung Nguyen E-Coffee</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="00NAz000004lfDV">Gói Campaign</label>
-        <select id="00NAz000004lfDV" name="00NAz000004lfDV">
+        <label for="00NNn00000BWvUg">Franchise Package</label>
+        <select id="00NNn00000BWvUg" name="00NNn00000BWvUg">
           <option value="">-- Chọn gói --</option>
         </select>
       </div>
@@ -228,8 +241,8 @@
   </form>
 
   <script>
-    const brandSelect = document.getElementById('00NAz000004lehF');
-    const packageSelect = document.getElementById('00NAz000004lfDV');
+    const brandSelect = document.getElementById('00NNn00000BWO0P');
+    const packageSelect = document.getElementById('00NNn00000BWO06');
 
     const optionsMap = {
       "Trung Nguyen Legend": ["Franchising I"],
