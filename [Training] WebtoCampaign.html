@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <title>Gia Nhập Chiến Dịch G7 - Trung Nguyên Legend</title>
+
+  <style>
+    :root {
+      --tn-gold: #b4975a; 
+      --tn-brown: #3e2723;
+      --tn-black: #1a1a1a;
+      --tn-white: #ffffff;
+      --tn-light-gold: rgba(180, 151, 90, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      /* Background G7 */
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                  url("https://trungnguyenlegend.com/wp-content/uploads/2020/11/2111.jpg") center / cover no-repeat fixed;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Hiệu ứng làm mờ lớp nền */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: inherit;
+      filter: blur(5px);
+      z-index: -1;
+      transform: scale(1.1);
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.98);
+      padding: 40px 35px;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      border-radius: 2px;
+    }
+
+    .form-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 5px;
+      background: var(--tn-gold);
+    }
+
+    .form-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-title h2 {
+      margin: 0;
+      color: var(--tn-black);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-title p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333;
+      letter-spacing: 0.5px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 15px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 0;
+      outline: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* HOVER & FOCUS KHÔNG LÀM NHẢY LAYOUT */
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--tn-gold);
+      /* Dùng box-shadow 0px spread để giả lập viền dày mà không tăng kích thước thực */
+      box-shadow: 0 0 0 1px var(--tn-gold), 0 4px 12px var(--tn-light-gold);
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+    }
+
+    .submit-btn input {
+      width: 100%;
+      padding: 16px;
+      background: var(--tn-black);
+      border: 1px solid var(--tn-black);
+      color: var(--tn-gold);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+    }
+
+    .submit-btn input:hover {
+      background: var(--tn-gold);
+      color: var(--tn-black);
+      border-color: var(--tn-gold);
+    }
+
+    @media (max-width: 480px) {
+      .form-row { flex-direction: column; gap: 0; }
+      .form-wrapper { padding: 30px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form
+    class="form-wrapper"
+    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DAz000008Ib4c"
+    method="POST"
+  >
+
+    <input type="hidden" name="oid" value="00DAz000008Ib4c">
+    <input type="hidden" name="retURL" value="https://trungnguyenecoffee.com/">
+    <input id="company" name="company" type="hidden" value="Non-company">
+    <input id="00NAz000004lal5" name="00NAz000004lal5" type="hidden" value="701Az00000Ue4n3IAB">
+    <input id="00NAz000004lfa7" name="00NAz000004lfa7" type="hidden" value="UTM Content">
+    <input id="00NAz000004loOr" name="00NAz000004loOr" type="hidden" value="UTM Medium">
+    <input id="00NAz000004loS5" name="00NAz000004loS5" type="hidden" value="UTM Source">
+    <input id="00NAz000004lgZO" name="00NAz000004lgZO" type="hidden" value="UTM Term">
+
+    <div class="form-title">
+      <h2>KHÁT VỌNG TOÀN CẦU</h2>
+      <p>Gia nhập cộng đồng Trung Nguyên Legend để nhận thông tin tư vấn chiến dịch mới nhất.</p>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="last_name">Họ tên *</label>
+        <input required id="last_name" name="last_name" maxlength="80" type="text" placeholder="Nguyễn Văn A">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Điện thoại *</label>
+        <input required id="phone" name="phone" maxlength="40" type="text" placeholder="090x xxx xxx">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email liên hệ</label>
+      <input id="email" name="email" maxlength="80" type="text" placeholder="example@gmail.com">
+    </div>
+
+    <div class="form-group">
+      <label for="00NAz000004zaQr">Khu vực quan tâm</label>
+      <select required id="00NAz000004zaQr" name="00NAz000004zaQr">
+        <option value="">-- Chọn khu vực --</option>
+        <option value="a08Az00000Ljm3GIAR">Thành phố Hồ Chí Minh</option>
+        <option value="a08Az00000Ljm2pIAB">Thành phố Hà Nội</option>
+        <option value="a08Az00000Ljm39IAB">Thành phố Đà Nẵng</option>
+        <option value="a08Az00000Ljm3LIAR">Thành phố Cần Thơ</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="00NAz000004lehF">Thương hiệu</label>
+        <select id="00NAz000004lehF" name="00NAz000004lehF">
+          <option value="">-- Chọn --</option>
+          <option value="Trung Nguyen Legend">Trung Nguyen Legend</option>
+          <option value="Trung Nguyen E-Coffee">Trung Nguyen E-Coffee</option>
+          <option value="Ca Phe The Gioi Trung Nguyen Legend">Ca Phe The Gioi Trung Nguyen Legend</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="00NAz000004lfDV">Gói Nhượng quyền</label>
+        <select id="00NAz000004lfDV" name="00NAz000004lfDV">
+          <option value="">-- Chọn gói --</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Ghi chú (Tâm huyết của bạn)</label>
+      <textarea name="description" placeholder="Để lại lời nhắn cho chúng tôi..."></textarea>
+    </div>
+
+    <div class="submit-btn">
+      <input type="submit" value="GỬI ĐĂNG KÝ">
+    </div>
+
+  </form>
+
+  <script>
+    const brandSelect = document.getElementById('00NAz000004lehF');
+    const packageSelect = document.getElementById('00NAz000004lfDV');
+
+    const optionsMap = {
+      "Trung Nguyen Legend": ["Franchising I"],
+      "Trung Nguyen E-Coffee": ["Thinh Vuong", "Khoi Nghiep", "Ket noi", "Chuyen doi"],
+      "Ca Phe The Gioi Trung Nguyen Legend": []
+    };
+
+    brandSelect.addEventListener('change', function () {
+      packageSelect.innerHTML = '<option value="">-- Chọn gói --</option>';
+
+      const selectedBrand = this.value;
+      const options = optionsMap[selectedBrand] || [];
+
+      options.forEach(function (opt) {
+        const optionEl = document.createElement('option');
+        optionEl.value = opt;
+        optionEl.text = opt;
+        packageSelect.add(optionEl);
+      });
+
+      packageSelect.disabled = options.length === 0;
+    });
+
+    brandSelect.dispatchEvent(new Event('change'));
+  </script>
+
+</body>
+</html>
