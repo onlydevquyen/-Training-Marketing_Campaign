@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <link rel="icon" type="image/x-icon" href="https://cafe.net.vn/media/favicon/stores/1/favicon-new.png">
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Gia Nhập Chiến Dịch G7 - Trung Nguyên Legend</title>
 
   <style>
     :root {
       --tn-gold: #b4975a; 
-      --tn-brown: #3e2723;
       --tn-black: #1a1a1a;
-      --tn-white: #ffffff;
       --tn-light-gold: rgba(180, 151, 90, 0.25);
     }
 
     * {
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-tap-highlight-color: transparent; /* Tắt highlight xanh khi chạm trên mobile */
     }
 
     body {
@@ -24,15 +25,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      /* Background G7 */
-      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+      padding: 15px; /* Giảm padding ngoài trên mobile */
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
                   url("https://trungnguyenlegend.com/wp-content/uploads/2020/11/2111.jpg") center / cover no-repeat fixed;
       position: relative;
-      overflow-x: hidden;
     }
 
-    /* Hiệu ứng làm mờ lớp nền */
     body::before {
       content: "";
       position: fixed;
@@ -47,9 +45,9 @@
       width: 100%;
       max-width: 520px;
       background: rgba(255, 255, 255, 0.98);
-      padding: 40px 35px;
+      padding: 35px 25px; /* Tối ưu padding cho mobile */
       position: relative;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       border-radius: 2px;
     }
 
@@ -62,75 +60,70 @@
 
     .form-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .form-title h2 {
       margin: 0;
       color: var(--tn-black);
-      font-size: 20px;
+      font-size: 18px; /* Giảm nhẹ size chữ tiêu đề cho mobile */
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .form-title p {
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: 8px;
+      font-size: 13px;
       color: #555;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .form-row {
       display: flex;
-      gap: 15px;
+      gap: 12px;
     }
 
     .form-group {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       flex: 1;
     }
 
     label {
       display: block;
       margin-bottom: 6px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      color: #333;
-      letter-spacing: 0.5px;
+      color: #444;
     }
 
     input[type="text"],
+    input[type="email"],
     select,
     textarea {
       width: 100%;
-      padding: 11px 15px;
-      font-size: 14px;
+      padding: 12px;
+      font-size: 16px; /* Quan trọng: 16px giúp iPhone không bị tự động zoom */
       border: 1px solid #ccc;
       background: #fff;
       border-radius: 0;
       outline: none;
       transition: all 0.2s ease-in-out;
+      -webkit-appearance: none; /* Xóa style mặc định của iOS trên select/input */
     }
 
-    /* HOVER & FOCUS KHÔNG LÀM NHẢY LAYOUT */
-    input[type="text"]:focus,
-    select:focus,
-    textarea:focus {
+    input:focus, select:focus, textarea:focus {
       border-color: var(--tn-gold);
-      /* Dùng box-shadow 0px spread để giả lập viền dày mà không tăng kích thước thực */
-      box-shadow: 0 0 0 1px var(--tn-gold), 0 4px 12px var(--tn-light-gold);
-      background-color: #fff;
+      box-shadow: 0 0 0 1px var(--tn-gold), 0 4px 10px var(--tn-light-gold);
     }
 
     textarea {
-      resize: vertical;
       min-height: 80px;
     }
 
     .submit-btn {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .submit-btn input {
@@ -147,39 +140,37 @@
       transition: all 0.3s;
     }
 
-    .submit-btn input:hover {
-      background: var(--tn-gold);
-      color: var(--tn-black);
-      border-color: var(--tn-gold);
-    }
-
-    @media (max-width: 480px) {
-      .form-row { flex-direction: column; gap: 0; }
-      .form-wrapper { padding: 30px 20px; }
+    /* RESPONSIVE CHO MOBILE */
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+      .form-wrapper {
+        padding: 25px 20px;
+      }
+      .form-title h2 {
+        font-size: 16px;
+      }
+      .submit-btn input {
+        padding: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <form
-    class="form-wrapper"
-    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DAz000008Ib4c"
-    method="POST"
-  >
+  <form class="form-wrapper" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DAz000008Ib4c" method="POST">
 
     <input type="hidden" name="oid" value="00DAz000008Ib4c">
     <input type="hidden" name="retURL" value="https://trungnguyenecoffee.com/">
     <input id="company" name="company" type="hidden" value="Non-company">
     <input id="00NAz000004lal5" name="00NAz000004lal5" type="hidden" value="701Az00000Ue4n3IAB">
-    <input id="00NAz000004lfa7" name="00NAz000004lfa7" type="hidden" value="UTM Content">
-    <input id="00NAz000004loOr" name="00NAz000004loOr" type="hidden" value="UTM Medium">
-    <input id="00NAz000004loS5" name="00NAz000004loS5" type="hidden" value="UTM Source">
-    <input id="00NAz000004lgZO" name="00NAz000004lgZO" type="hidden" value="UTM Term">
 
     <div class="form-title">
       <h2>KHÁT VỌNG TOÀN CẦU</h2>
-      <p>Gia nhập cộng đồng Trung Nguyên Legend để nhận thông tin tư vấn chiến dịch mới nhất.</p>
+      <p>Cùng Trung Nguyên Legend lan tỏa hương vị cà phê năng lượng toàn cầu.</p>
     </div>
 
     <div class="form-row">
@@ -187,7 +178,6 @@
         <label for="last_name">Họ tên *</label>
         <input required id="last_name" name="last_name" maxlength="80" type="text" placeholder="Nguyễn Văn A">
       </div>
-
       <div class="form-group">
         <label for="phone">Điện thoại *</label>
         <input required id="phone" name="phone" maxlength="40" type="text" placeholder="090x xxx xxx">
@@ -195,19 +185,18 @@
     </div>
 
     <div class="form-group">
-      <label for="email">Email liên hệ</label>
+      <label for="email">Email</label>
       <input id="email" name="email" maxlength="80" type="text" placeholder="example@gmail.com">
     </div>
 
     <div class="form-group">
-      <label for="00NAz000004zaQr">Khu vực quan tâm</label>
+      <label for="00NAz000004zaQr">Khu vực</label>
       <select required id="00NAz000004zaQr" name="00NAz000004zaQr">
         <option value="">-- Chọn khu vực --</option>
         <option value="a08Az00000Ljm3GIAR">Thành phố Hồ Chí Minh</option>
         <option value="a08Az00000Ljm2pIAB">Thành phố Hà Nội</option>
         <option value="a08Az00000Ljm39IAB">Thành phố Đà Nẵng</option>
-        <option value="a08Az00000Ljm3LIAR">Thành phố Cần Thơ</option>
-        </select>
+      </select>
     </div>
 
     <div class="form-row">
@@ -217,12 +206,10 @@
           <option value="">-- Chọn --</option>
           <option value="Trung Nguyen Legend">Trung Nguyen Legend</option>
           <option value="Trung Nguyen E-Coffee">Trung Nguyen E-Coffee</option>
-          <option value="Ca Phe The Gioi Trung Nguyen Legend">Ca Phe The Gioi Trung Nguyen Legend</option>
         </select>
       </div>
-
       <div class="form-group">
-        <label for="00NAz000004lfDV">Gói Nhượng quyền</label>
+        <label for="00NAz000004lfDV">Gói Campaign</label>
         <select id="00NAz000004lfDV" name="00NAz000004lfDV">
           <option value="">-- Chọn gói --</option>
         </select>
@@ -230,8 +217,8 @@
     </div>
 
     <div class="form-group">
-      <label for="description">Ghi chú (Tâm huyết của bạn)</label>
-      <textarea name="description" placeholder="Để lại lời nhắn cho chúng tôi..."></textarea>
+      <label for="description">Ghi chú</label>
+      <textarea name="description" placeholder="Để lại lời nhắn..."></textarea>
     </div>
 
     <div class="submit-btn">
@@ -252,17 +239,14 @@
 
     brandSelect.addEventListener('change', function () {
       packageSelect.innerHTML = '<option value="">-- Chọn gói --</option>';
-
       const selectedBrand = this.value;
       const options = optionsMap[selectedBrand] || [];
-
       options.forEach(function (opt) {
         const optionEl = document.createElement('option');
         optionEl.value = opt;
         optionEl.text = opt;
         packageSelect.add(optionEl);
       });
-
       packageSelect.disabled = options.length === 0;
     });
 
