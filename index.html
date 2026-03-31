@@ -247,8 +247,8 @@
         <label for="00NNn00000BWO06">Interested Brand</label>
         <select id="00NNn00000BWO06" name="00NNn00000BWO06">
           <option value="">-- Chọn --</option>
-          <option value="Trung Nguyen Legend">Trung Nguyen Legend</option>
-          <option value="Trung Nguyen E-Coffee">Trung Nguyen E-Coffee</option>
+          <option value="Trung Nguyen Legend">Trung Nguyên Legend</option>
+          <option value="Trung Nguyen E-Coffee">Trung Nguyên E-Coffee</option>
         </select>
       </div>
       <div class="form-group">
@@ -271,25 +271,28 @@
   </form>
 
   <script>
-    const brandSelect = document.getElementById('00NNn00000BWO0P');
-    const packageSelect = document.getElementById('00NNn00000BWO06');
+  const brandSelect = document.getElementById('00NNn00000BWO06');
+    const packageSelect = document.getElementById('00NNn00000BWvUg');
 
     const optionsMap = {
       "Trung Nguyen Legend": ["Franchising I"],
-      "Trung Nguyen E-Coffee": ["Thinh Vuong", "Khoi Nghiep", "Ket noi", "Chuyen doi"],
+      "Trung Nguyen E-Coffee": ["Thịnh Vượng", "Khởi Nghiệp", "Kết Nối", "Chuyển Đổi"],
       "Ca Phe The Gioi Trung Nguyen Legend": []
     };
 
     brandSelect.addEventListener('change', function () {
-      packageSelect.innerHTML = '<option value="">-- Chọn gói --</option>';
+      packageSelect.innerHTML = '<option value="">-- None --</option>';
+
       const selectedBrand = this.value;
       const options = optionsMap[selectedBrand] || [];
+
       options.forEach(function (opt) {
         const optionEl = document.createElement('option');
         optionEl.value = opt;
         optionEl.text = opt;
         packageSelect.add(optionEl);
       });
+
       packageSelect.disabled = options.length === 0;
     });
 
